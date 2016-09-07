@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.avatar.floatingbar"
+    android:sharedUserId="android.uid.systemui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name="com.avatar.floatingbar.FloatingBarApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true" >
+        <service
+            android:name="com.avatar.floatingbar.FloatingBarService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.avatar.floatingbar.START_FLOATING_BAR" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

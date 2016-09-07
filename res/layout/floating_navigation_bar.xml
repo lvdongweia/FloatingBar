@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:floatingbar="http://schemas.android.com/apk/res/com.avatar.floatingbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/floatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/pointer_clicked"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/floatView"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/back"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="46px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/ic_sysbar_back"
+                floatingbar:keyCode="4" />
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/settings"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/settings" />
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/brightness"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/brightness" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/home"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="top"
+                android:layout_marginLeft="46px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/ic_sysbar_home"
+                floatingbar:keyCode="3"
+                floatingbar:keyRepeat="false" />
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/recent"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/ic_sysbar_recent" />
+
+            <com.avatar.floatingbar.KeyButtonView
+                android:id="@+id/battery"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                android:layout_gravity="top"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/btn_clicked"
+                android:src="@drawable/power" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

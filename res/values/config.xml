@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="battery_dialog_long_timeout">4000</integer>
+    <integer name="battery_dialog_short_timeout">2000</integer>
+
+</resources>
